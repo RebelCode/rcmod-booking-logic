@@ -12,7 +12,14 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^5.4 | ^7.0"
+        "php": "^5.4 | ^7.0",
+        "rebelcode/modular": "dev-task/initial-classes",
+        "rebelcode/booking": "dev-task/initial-classes",
+        "rebelcode/booking-transitioner": "dev-task/initial-classes",
+        "rebelcode/event-state-machine": "dev-task/2_make-possible-transitions-aware",
+        "rebelcode/session-generator": "dev-task/initial-classes",
+        "dhii/cqrs-resource-model-interface": "^0.1-alpha2",
+        "dhii/psr-14": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
