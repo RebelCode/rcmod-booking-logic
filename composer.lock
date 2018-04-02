@@ -1379,16 +1379,16 @@
         },
         {
             "name": "dhii/map",
-            "version": "dev-fix/3_rewind-empty-map-error",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/map.git",
-                "reference": "cb2bf82797ff983415ee9f87d6e028cf3aa63bf7"
+                "reference": "32cab23c0884c61d66bf02ee6344dbfc301a3174"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/map/zipball/cb2bf82797ff983415ee9f87d6e028cf3aa63bf7",
-                "reference": "cb2bf82797ff983415ee9f87d6e028cf3aa63bf7",
+                "url": "https://api.github.com/repos/Dhii/map/zipball/32cab23c0884c61d66bf02ee6344dbfc301a3174",
+                "reference": "32cab23c0884c61d66bf02ee6344dbfc301a3174",
                 "shasum": ""
             },
             "require": {
@@ -1430,7 +1430,7 @@
                 }
             ],
             "description": "An iterable container implementation.",
-            "time": "2018-03-23T08:22:29+00:00"
+            "time": "2018-03-21T16:47:36+00:00"
         },
         {
             "name": "dhii/modular-interface",
@@ -1833,12 +1833,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/wp-events.git",
-                "reference": "f4f49fccffd8f215ce3fc1f8d592d824a86b6d55"
+                "reference": "e90d526d6f209653ee5802b894e35e0b10b23fdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/wp-events/zipball/f4f49fccffd8f215ce3fc1f8d592d824a86b6d55",
-                "reference": "f4f49fccffd8f215ce3fc1f8d592d824a86b6d55",
+                "url": "https://api.github.com/repos/Dhii/wp-events/zipball/e90d526d6f209653ee5802b894e35e0b10b23fdf",
+                "reference": "e90d526d6f209653ee5802b894e35e0b10b23fdf",
                 "shasum": ""
             },
             "require": {
@@ -1878,7 +1878,7 @@
                 }
             ],
             "description": "A PSR-14 compliant event wrapper for WordPress.",
-            "time": "2018-03-30T16:03:51+00:00"
+            "time": "2018-04-02T18:33:17+00:00"
         },
         {
             "name": "psr/container",
@@ -1935,17 +1935,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/booking.git",
-                "reference": "6f9593c285c9b2a3e92df9654b1295f028d09a47"
+                "reference": "5762c3a65bade1dbb15108ffae48634f17bc2c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/booking/zipball/6f9593c285c9b2a3e92df9654b1295f028d09a47",
-                "reference": "6f9593c285c9b2a3e92df9654b1295f028d09a47",
+                "url": "https://api.github.com/repos/RebelCode/booking/zipball/5762c3a65bade1dbb15108ffae48634f17bc2c7b",
+                "reference": "5762c3a65bade1dbb15108ffae48634f17bc2c7b",
                 "shasum": ""
             },
             "require": {
                 "dhii/factory-base": "^0.1-alpha1",
-                "dhii/map": "dev-fix/3_rewind-empty-map-error",
+                "dhii/map": "^0.1-alpha1",
                 "dhii/time-interface": "dev-develop",
                 "php": "^5.4 | ^7.0",
                 "rebelcode/booking-abstract": "dev-develop",
@@ -1979,7 +1979,7 @@
                 }
             ],
             "description": "Concrete implementation of bookings.",
-            "time": "2018-03-28T09:23:02+00:00"
+            "time": "2018-04-02T15:39:02+00:00"
         },
         {
             "name": "rebelcode/booking-abstract",
@@ -2241,12 +2241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/modular.git",
-                "reference": "c36c475eb329b3a27078f5f3c4b2d218054491c5"
+                "reference": "925b5e4198afc5ca1557b9fe3493bd0c05bf1eb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/modular/zipball/c36c475eb329b3a27078f5f3c4b2d218054491c5",
-                "reference": "c36c475eb329b3a27078f5f3c4b2d218054491c5",
+                "url": "https://api.github.com/repos/RebelCode/modular/zipball/925b5e4198afc5ca1557b9fe3493bd0c05bf1eb7",
+                "reference": "925b5e4198afc5ca1557b9fe3493bd0c05bf1eb7",
                 "shasum": ""
             },
             "require": {
@@ -2292,7 +2292,7 @@
                 }
             ],
             "description": "A module system.",
-            "time": "2018-04-02T11:50:00+00:00"
+            "time": "2018-04-02T17:41:17+00:00"
         },
         {
             "name": "rebelcode/module-iterator-abstract",
