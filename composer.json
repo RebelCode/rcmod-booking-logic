@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RebelCode\\Bookings\\": "src"
+            "RebelCode\\Bookings\\Module\\": "src"
         }
     },
     "scripts": {
