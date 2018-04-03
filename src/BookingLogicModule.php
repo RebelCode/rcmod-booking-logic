@@ -6,7 +6,6 @@ use Dhii\Data\Container\ContainerFactoryInterface;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
 use RebelCode\Bookings\BookingFactory;
-use RebelCode\Bookings\BookingInterface;
 use RebelCode\Bookings\FactoryStateMachineTransitioner;
 use RebelCode\Modular\Module\AbstractBaseModule;
 use RebelCode\Sessions\SessionGeneratorFactory;
@@ -51,19 +50,6 @@ class BookingLogicModule extends AbstractBaseModule
                         $c->get('booking_state_machine_provider'),
                         $c->get('booking_factory')
                     );
-                },
-                'booking_state_machine_provider' => function(ContainerInterface $c) use ($config) {
-                    return function(BookingInterface $booking, $transition) use ($c, $config) {
-                        return $c->get('booking_state_machine_factory')->make(
-                            [
-                                'event_manager'     => $c->get('event_manager'),
-                                'initial_state'     => $booking->getStatus(),
-                                'transitions'       => $config['booking_status_transitions'],
-                                'event_name_format' => $config['booking_event_state_machine']['event_name_format'],
-                                'target'            => $booking,
-                            ]
-                        );
-                    };
                 },
                 'booking_state_machine_factory' => function(ContainerInterface $c) {
                     return new EventStateMachineFactory();
