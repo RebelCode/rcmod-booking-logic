@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "afbf06db3c06b9d07a0aca896a522798",
+    "content-hash": "0a8fdddc21a139abae0a751373d4ff3d",
     "packages": [
         {
             "name": "dhii/callback-abstract",
@@ -155,61 +155,6 @@
             ],
             "description": "Helper functionality for working with container.",
             "time": "2018-02-16T13:22:06+00:00"
-        },
-        {
-            "name": "dhii/cqrs-resource-model-interface",
-            "version": "v0.1-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/cqrs-resource-model-interface.git",
-                "reference": "38273c0314b80b9ab575ac8129071ee6fc0d5bdf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/cqrs-resource-model-interface/zipball/38273c0314b80b9ab575ac8129071ee6fc0d5bdf",
-                "reference": "38273c0314b80b9ab575ac8129071ee6fc0d5bdf",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3 | ^7.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "<=0.3.2",
-                "dhii/expression-interface": "^0.2",
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "dhii/sql-interface": "^0.1",
-                "dhii/stringable-interface": "^0.1",
-                "phpunit/phpunit": "^4.8",
-                "psr/container": "^1.0",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "suggest": {
-                "dhii/expression-interface": "To create query conditions and value expressions.",
-                "dhii/stringable-interface": "To pass stringable objects in place of strings."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "0.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Storage\\Resource\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dhii Team",
-                    "email": "development@dhii.co"
-                }
-            ],
-            "description": "Interfaces for a CQRS approach to resource models.",
-            "time": "2018-03-08T10:51:04+00:00"
         },
         {
             "name": "dhii/data-container-abstract",
@@ -1787,47 +1732,6 @@
             "time": "2018-03-13T08:39:20+00:00"
         },
         {
-            "name": "dhii/validation-interface",
-            "version": "v0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/validation-interface.git",
-                "reference": "492823aa1bb6b0f2391b1c50b5161a8b2619288f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/validation-interface/zipball/492823aa1bb6b0f2391b1c50b5161a8b2619288f",
-                "reference": "492823aa1bb6b0f2391b1c50b5161a8b2619288f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3 | ^7.0"
-            },
-            "require-dev": {
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Validation\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dhii Team",
-                    "email": "development@dhii.co"
-                }
-            ],
-            "description": "A base interface for validators",
-            "time": "2017-03-10T13:38:44+00:00"
-        },
-        {
             "name": "dhii/wp-events",
             "version": "dev-task/wip-refactoring",
             "source": {
@@ -2188,12 +2092,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/event-state-machine.git",
-                "reference": "1082d89616d3244941b2447c540eae06fa8b1d10"
+                "reference": "ba07ef45aa2484adfa6db1bac2ddb299ae199b9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/event-state-machine/zipball/1082d89616d3244941b2447c540eae06fa8b1d10",
-                "reference": "1082d89616d3244941b2447c540eae06fa8b1d10",
+                "url": "https://api.github.com/repos/RebelCode/event-state-machine/zipball/ba07ef45aa2484adfa6db1bac2ddb299ae199b9d",
+                "reference": "ba07ef45aa2484adfa6db1bac2ddb299ae199b9d",
                 "shasum": ""
             },
             "require": {
@@ -2233,7 +2137,7 @@
                 }
             ],
             "description": "An event-based state machine implementation.",
-            "time": "2018-04-02T14:02:04+00:00"
+            "time": "2018-04-03T13:05:04+00:00"
         },
         {
             "name": "rebelcode/modular",
@@ -2341,97 +2245,6 @@
             ],
             "description": "Basic and abstract functionality for module iterators.",
             "time": "2018-03-14T13:01:50+00:00"
-        },
-        {
-            "name": "rebelcode/session-generator",
-            "version": "dev-task/initial-classes",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RebelCode/session-generator.git",
-                "reference": "5e366bae16aa4937481d28d7515b65ae401ec8a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/session-generator/zipball/5e366bae16aa4937481d28d7515b65ae401ec8a7",
-                "reference": "5e366bae16aa4937481d28d7515b65ae401ec8a7",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/exception": "0.1-alpha4",
-                "dhii/factory-base": "^0.1-alpha1",
-                "dhii/i18n-helper-base": "0.1-alpha1",
-                "dhii/validation-interface": "^0.1 | 0.2-alpha1 | 0.2-alpha2",
-                "php": "^5.4 | ^7.0",
-                "rebelcode/session-generator-interface": "dev-develop"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "<=0.3.2",
-                "dhii/invocable-interface": "0.1-alpha1",
-                "dhii/php-cs-fixer-config": "^0.1",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RebelCode\\Sessions\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "RebelCode",
-                    "email": "dev@rebelcode.com"
-                }
-            ],
-            "description": "A session generator implementation.",
-            "time": "2018-03-28T12:07:40+00:00"
-        },
-        {
-            "name": "rebelcode/session-generator-interface",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RebelCode/session-generator-interface.git",
-                "reference": "ea22a525db67bf5bcb1e0ae75b1786d39361717e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/session-generator-interface/zipball/ea22a525db67bf5bcb1e0ae75b1786d39361717e",
-                "reference": "ea22a525db67bf5bcb1e0ae75b1786d39361717e",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/factory-interface": "^0.1-alpha1",
-                "php": "^5.3 | ^7.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "<=0.3.2",
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RebelCode\\Sessions\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "RebelCode",
-                    "email": "dev@rebelcode.com"
-                }
-            ],
-            "description": "Interfaces for objects that are capable of generating sessions.",
-            "time": "2018-03-28T11:50:02+00:00"
         }
     ],
     "packages-dev": [
@@ -4288,13 +4101,15 @@
         "rebelcode/modular": 20,
         "rebelcode/booking": 20,
         "rebelcode/booking-transitioner": 20,
-        "rebelcode/event-state-machine": 20,
-        "rebelcode/session-generator": 20
+        "rebelcode/event-state-machine": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^5.4 | ^7.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "5.4.0"
+    }
 }
