@@ -43,10 +43,10 @@ class BookingLogicModule extends AbstractBaseModule
 
         return $this->_createContainer(
             [
-                'booking_factory'                => function(ContainerInterface $c) {
+                'booking_factory'               => function(ContainerInterface $c) {
                     return new BookingFactory();
                 },
-                'booking_transitioner'           => function(ContainerInterface $c) {
+                'booking_transitioner'          => function(ContainerInterface $c) {
                     return new FactoryStateMachineTransitioner(
                         $c->get('booking_state_machine_provider'),
                         $c->get('booking_factory')
@@ -65,10 +65,10 @@ class BookingLogicModule extends AbstractBaseModule
                         );
                     };
                 },
-                'booking_state_machine_factory'  => function(ContainerInterface $c) {
+                'booking_state_machine_factory' => function(ContainerInterface $c) {
                     return new EventStateMachineFactory();
                 },
-                'session-generator-factory'      => function(ContainerInterface $c) {
+                'session-generator-factory'     => function(ContainerInterface $c) {
                     return new SessionGeneratorFactory();
                 },
             ]
