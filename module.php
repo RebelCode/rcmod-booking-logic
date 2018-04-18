@@ -11,8 +11,8 @@ return function(ContainerInterface $c) {
     return new BookingLogicModule(
         RC_BOOKING_LOGIC_MODULE_KEY,
         [],
-        $c->get('container_factory'),
         $c->get('config_factory'),
+        $c->get('container_factory'),
         $c->get('composite_container_factory')
     );
 };

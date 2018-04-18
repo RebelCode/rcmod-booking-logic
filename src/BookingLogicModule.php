@@ -37,7 +37,7 @@ class BookingLogicModule extends AbstractBaseModule
         $containerFactory,
         $compContainerFactory
     ) {
-        $this->_initModule($key, $dependencies, $containerFactory, $configFactory, $compContainerFactory);
+        $this->_initModule($key, $dependencies, $configFactory, $containerFactory, $compContainerFactory);
     }
 
     /**

@@ -742,16 +742,16 @@
         },
         {
             "name": "dhii/exception",
-            "version": "v0.1-alpha4",
+            "version": "v0.1-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/exception.git",
-                "reference": "848b8e2b7fe3a38456707bd6292baf1e7caaf9e0"
+                "reference": "f7afb934c970a4e167b2c7ba24fa3df50714e0fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/exception/zipball/848b8e2b7fe3a38456707bd6292baf1e7caaf9e0",
-                "reference": "848b8e2b7fe3a38456707bd6292baf1e7caaf9e0",
+                "url": "https://api.github.com/repos/Dhii/exception/zipball/f7afb934c970a4e167b2c7ba24fa3df50714e0fe",
+                "reference": "f7afb934c970a4e167b2c7ba24fa3df50714e0fe",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +792,7 @@
                 }
             ],
             "description": "Standards-compliant exception classes",
-            "time": "2018-03-16T13:46:13+00:00"
+            "time": "2018-04-02T15:18:58+00:00"
         },
         {
             "name": "dhii/exception-interface",
@@ -2419,12 +2419,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/modular.git",
-                "reference": "d019ed4c21442ba77582cd9708691edea66883de"
+                "reference": "19d062be6698d3a1fe2375f84ca9e67faf18ab43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/modular/zipball/d019ed4c21442ba77582cd9708691edea66883de",
-                "reference": "d019ed4c21442ba77582cd9708691edea66883de",
+                "url": "https://api.github.com/repos/RebelCode/modular/zipball/19d062be6698d3a1fe2375f84ca9e67faf18ab43",
+                "reference": "19d062be6698d3a1fe2375f84ca9e67faf18ab43",
                 "shasum": ""
             },
             "require": {
@@ -2471,7 +2471,7 @@
                 }
             ],
             "description": "A module system.",
-            "time": "2018-04-16T14:42:13+00:00"
+            "time": "2018-04-18T15:42:50+00:00"
         },
         {
             "name": "rebelcode/module-iterator-abstract",
@@ -2527,19 +2527,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/session-generator.git",
-                "reference": "5e366bae16aa4937481d28d7515b65ae401ec8a7"
+                "reference": "fbda06d0e6ddd616a5db80bd1c3a897b43506f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/session-generator/zipball/5e366bae16aa4937481d28d7515b65ae401ec8a7",
-                "reference": "5e366bae16aa4937481d28d7515b65ae401ec8a7",
+                "url": "https://api.github.com/repos/RebelCode/session-generator/zipball/fbda06d0e6ddd616a5db80bd1c3a897b43506f25",
+                "reference": "fbda06d0e6ddd616a5db80bd1c3a897b43506f25",
                 "shasum": ""
             },
             "require": {
-                "dhii/exception": "0.1-alpha4",
+                "dhii/exception": "^0.1-alpha4",
                 "dhii/factory-base": "^0.1-alpha1",
-                "dhii/i18n-helper-base": "0.1-alpha1",
-                "dhii/validation-interface": "^0.1 | 0.2-alpha1 | 0.2-alpha2",
+                "dhii/i18n-helper-base": "^0.1-alpha1",
+                "dhii/validation-interface": "^0.1 | ^0.2-alpha1",
                 "php": "^5.4 | ^7.0",
                 "rebelcode/session-generator-interface": "dev-develop"
             },
@@ -2567,7 +2567,7 @@
                 }
             ],
             "description": "A session generator implementation.",
-            "time": "2018-03-28T12:07:40+00:00"
+            "time": "2018-04-18T15:35:24+00:00"
         },
         {
             "name": "rebelcode/session-generator-interface",
