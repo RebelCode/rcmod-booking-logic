@@ -3,6 +3,7 @@
 namespace RebelCode\Bookings\Module;
 
 use Dhii\Data\Container\ContainerFactoryInterface;
+use Dhii\Exception\InternalException;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
 use RebelCode\Bookings\BookingFactory;
@@ -24,51 +25,60 @@ class BookingLogicModule extends AbstractBaseModule
      *
      * @since [*next-version*]
      *
-     * @param string|Stringable              $key              The module key.
-     * @param ContainerFactoryInterface|null $containerFactory The container factory, if any.
+     * @param string|Stringable         $key                  The module key.
+     * @param string[]|Stringable[]     $dependencies         The module dependencies.
+     * @param ContainerFactoryInterface $configFactory        The config factory.
+     * @param ContainerFactoryInterface $containerFactory     The container factory.
+     * @param ContainerFactoryInterface $compContainerFactory The composite container factory.
      */
-    public function __construct($key, $containerFactory)
-    {
-        $this->_initModule($containerFactory, $key);
+    public function __construct(
+        $key,
+        $dependencies,
+        $configFactory,
+        $containerFactory,
+        $compContainerFactory
+    ) {
+        $this->_initModule($key, $dependencies, $containerFactory, $configFactory, $compContainerFactory);
     }
 
     /**
      * {@inheritdoc}
      *
      * @since [*next-version*]
+     *
+     * @throws InternalException
      */
     public function setup()
     {
-        $config = $this->_getConfig();
-
-        return $this->_createContainer(
+        return $this->_setupContainer(
+            $this->_loadPhpConfigFile(RC_BOOKING_LOGIC_MODULE_CONFIG),
             [
-                'booking_factory'                => function(ContainerInterface $c) {
+                'booking_factory'                => function (ContainerInterface $c) {
                     return new BookingFactory();
                 },
-                'booking_transitioner'           => function(ContainerInterface $c) {
+                'booking_transitioner'           => function (ContainerInterface $c) {
                     return new FactoryStateMachineTransitioner(
                         $c->get('booking_state_machine_provider'),
                         $c->get('booking_factory')
                     );
                 },
-                'booking_state_machine_provider' => function(ContainerInterface $c) use ($config) {
-                    return function(BookingInterface $booking, $transition) use ($c, $config) {
+                'booking_state_machine_provider' => function (ContainerInterface $c) {
+                    return function (BookingInterface $booking, $transition) use ($c) {
                         return $c->get('booking_state_machine_factory')->make(
                             [
                                 'event_manager'     => $c->get('event_manager'),
                                 'initial_state'     => $booking->getStatus(),
-                                'transitions'       => $config['booking_status_transitions'],
-                                'event_name_format' => $config['booking_event_state_machine']['event_name_format'],
+                                'transitions'       => $c->get('booking_logic/booking_status_transitions'),
+                                'event_name_format' => $c->get('booking_logic/booking_event_state_machine/event_name_format'),
                                 'target'            => $booking,
                             ]
                         );
                     };
                 },
-                'booking_state_machine_factory'  => function(ContainerInterface $c) {
+                'booking_state_machine_factory'  => function (ContainerInterface $c) {
                     return new EventStateMachineFactory();
                 },
-                'session-generator-factory'      => function(ContainerInterface $c) {
+                'session-generator-factory'      => function (ContainerInterface $c) {
                     return new SessionGeneratorFactory();
                 },
             ]
