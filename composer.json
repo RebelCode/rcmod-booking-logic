@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^5.4 | ^7.0",
-        "rebelcode/modular": "dev-task/initial-classes",
+        "rebelcode/modular": "^0.1-alpha1",
         "rebelcode/booking": "dev-task/initial-classes",
         "rebelcode/booking-transitioner": "dev-task/initial-classes",
         "rebelcode/event-state-machine": "dev-task/2_make-possible-transitions-aware",

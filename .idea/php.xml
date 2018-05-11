@@ -28,7 +28,6 @@
       <path value="$PROJECT_DIR$/vendor/dhii/data-container-base" />
       <path value="$PROJECT_DIR$/vendor/dhii/data-container-abstract" />
       <path value="$PROJECT_DIR$/vendor/dhii/iterator-abstract" />
-      <path value="$PROJECT_DIR$/vendor/dhii/modular-interface" />
       <path value="$PROJECT_DIR$/vendor/dhii/factory-base" />
       <path value="$PROJECT_DIR$/vendor/dhii/data-path-aware-interface" />
       <path value="$PROJECT_DIR$/vendor/dhii/iterator-base" />
@@ -91,6 +90,7 @@
       <path value="$PROJECT_DIR$/vendor/rebelcode/session-generator" />
       <path value="$PROJECT_DIR$/vendor/dhii/cqrs-resource-model-interface" />
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/dhii/config-interface" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />
