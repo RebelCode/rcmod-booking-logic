@@ -15,8 +15,8 @@
         "php": "^5.4 | ^7.0",
         "rebelcode/modular": "^0.1-alpha1",
         "rebelcode/booking": "^0.1-alpha1",
-        "rebelcode/booking-transitioner": "dev-task/initial-classes",
-        "rebelcode/event-state-machine": "dev-task/2_make-possible-transitions-aware",
+        "rebelcode/booking-transitioner": "^0.1-alpha1",
+        "rebelcode/event-state-machine": "^0.1-alpha1",
         "rebelcode/session-generator": "dev-task/initial-classes",
         "dhii/cqrs-resource-model-interface": "^0.1-alpha2",
         "dhii/psr-14": "^0.1"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6105fdfea949dd1db3e2f5bd8206a59d",
+    "content-hash": "bc10383a0b3ef8cf645878b3fc6987f9",
     "packages": [
         {
             "name": "dhii/args-list-validation",
@@ -1453,18 +1453,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/machine-state-machine-interface.git",
-                "reference": "5c9cb17bb28c49b91c7e7db93ea1eac9fe0ec614"
+                "reference": "9f06947a245a875b9b4f40c6e4ae6e7ba7b0f8f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/machine-state-machine-interface/zipball/5c9cb17bb28c49b91c7e7db93ea1eac9fe0ec614",
-                "reference": "5c9cb17bb28c49b91c7e7db93ea1eac9fe0ec614",
+                "url": "https://api.github.com/repos/Dhii/machine-state-machine-interface/zipball/9f06947a245a875b9b4f40c6e4ae6e7ba7b0f8f9",
+                "reference": "9f06947a245a875b9b4f40c6e4ae6e7ba7b0f8f9",
                 "shasum": ""
             },
             "require": {
                 "dhii/data-key-value-aware-interface": "^0.1",
                 "dhii/exception-interface": "^0.1|^0.2",
-                "dhii/factory-interface": "0.1-alpha1 | 0.1-alpha2",
+                "dhii/factory-interface": "^0.1-alpha1",
                 "dhii/stringable-interface": "^0.1",
                 "php": "^5.3 | ^7.0"
             },
@@ -1475,6 +1475,11 @@
                 "ptrofimov/xpmock": "^1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Dhii\\State\\": "src"
@@ -1491,7 +1496,7 @@
                 }
             ],
             "description": "Interfaces for state machines.",
-            "time": "2018-03-28T13:31:01+00:00"
+            "time": "2018-05-15T08:46:12+00:00"
         },
         {
             "name": "dhii/map",
@@ -1692,16 +1697,16 @@
         },
         {
             "name": "dhii/state-machine-abstract",
-            "version": "dev-develop",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/state-machine-abstract.git",
-                "reference": "351d58cef38eb63f7e9ccd1986197b834625e02c"
+                "reference": "cb5f706edd74d1c747f09f505b859255b13a5b27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/state-machine-abstract/zipball/351d58cef38eb63f7e9ccd1986197b834625e02c",
-                "reference": "351d58cef38eb63f7e9ccd1986197b834625e02c",
+                "url": "https://api.github.com/repos/Dhii/state-machine-abstract/zipball/cb5f706edd74d1c747f09f505b859255b13a5b27",
+                "reference": "cb5f706edd74d1c747f09f505b859255b13a5b27",
                 "shasum": ""
             },
             "require": {
@@ -1709,13 +1714,18 @@
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "<=0.3.2",
-                "dhii/machine-state-machine-interface": "dev-develop",
+                "dhii/machine-state-machine-interface": "^0.1-alpha1",
                 "dhii/php-cs-fixer-config": "^0.1",
                 "dhii/stringable-interface": "^0.1",
                 "phpunit/phpunit": "^4.8",
                 "ptrofimov/xpmock": "^1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Dhii\\State\\": "src"
@@ -1732,7 +1742,7 @@
                 }
             ],
             "description": "Abstract functionality for state machines.",
-            "time": "2018-03-08T15:44:42+00:00"
+            "time": "2018-05-15T09:04:58+00:00"
         },
         {
             "name": "dhii/stringable-interface",
@@ -2284,29 +2294,29 @@
         },
         {
             "name": "rebelcode/booking-transitioner",
-            "version": "dev-task/initial-classes",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/booking-transitioner.git",
-                "reference": "b1a547c625030ba390ca91fddc7e7b946d2f2974"
+                "reference": "b039c072eedf7074ee435da5289a582f634ae581"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/booking-transitioner/zipball/b1a547c625030ba390ca91fddc7e7b946d2f2974",
-                "reference": "b1a547c625030ba390ca91fddc7e7b946d2f2974",
+                "url": "https://api.github.com/repos/RebelCode/booking-transitioner/zipball/b039c072eedf7074ee435da5289a582f634ae581",
+                "reference": "b039c072eedf7074ee435da5289a582f634ae581",
                 "shasum": ""
             },
             "require": {
                 "dhii/exception-helper-base": "0.1-alpha1",
                 "dhii/factory-base": "^0.1-alpha3",
                 "dhii/i18n-helper-base": "^0.1",
-                "dhii/machine-state-machine-interface": "dev-develop",
-                "dhii/state-machine-abstract": "dev-develop",
+                "dhii/machine-state-machine-interface": "^0.1-alpha1",
+                "dhii/state-machine-abstract": "^0.1-alpha1",
                 "dhii/stringable-interface": "^0.1",
                 "php": "^5.4 | ^7.0",
                 "rebelcode/booking-abstract": "^0.1-alpha1",
                 "rebelcode/booking-interface": "^0.1-alpha1",
-                "rebelcode/booking-transitioner-interface": "dev-task/add-factory-interface"
+                "rebelcode/booking-transitioner-interface": "^0.1-alpha1"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "<=0.3.2",
@@ -2318,6 +2328,11 @@
                 "ptrofimov/xpmock": "^1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "RebelCode\\Bookings\\": "src"
@@ -2334,34 +2349,34 @@
                 }
             ],
             "description": "Booking transitioner implementations.",
-            "time": "2018-05-14T16:24:50+00:00"
+            "time": "2018-05-15T09:38:49+00:00"
         },
         {
             "name": "rebelcode/booking-transitioner-interface",
-            "version": "dev-task/add-factory-interface",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/booking-transitioner-interface.git",
-                "reference": "d6e78f62710bb112f323c4854d6fe1cae2562b66"
+                "reference": "a1a6eaf0ec9fac22b78d082468f513b827d958ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/booking-transitioner-interface/zipball/d6e78f62710bb112f323c4854d6fe1cae2562b66",
-                "reference": "d6e78f62710bb112f323c4854d6fe1cae2562b66",
+                "url": "https://api.github.com/repos/RebelCode/booking-transitioner-interface/zipball/a1a6eaf0ec9fac22b78d082468f513b827d958ca",
+                "reference": "a1a6eaf0ec9fac22b78d082468f513b827d958ca",
                 "shasum": ""
             },
             "require": {
-                "dhii/factory-interface": "0.1-alpha1 | 0.1-alpha2",
+                "dhii/factory-interface": "^0.1-alpha1",
                 "php": "^5.3 | ^7.0"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "<=0.3.2",
-                "dhii/exception-interface": "^0.1",
+                "dhii/exception-interface": "^0.1 | ^0.2-alpha1",
                 "dhii/php-cs-fixer-config": "dev-php-5.3",
                 "dhii/stringable-interface": "^0.1",
                 "phpunit/phpunit": "^4.8",
                 "ptrofimov/xpmock": "^1.1",
-                "rebelcode/booking-interface": "dev-task/initial-interfaces"
+                "rebelcode/booking-interface": "^0.1-alpha1"
             },
             "type": "library",
             "autoload": {
@@ -2380,20 +2395,20 @@
                 }
             ],
             "description": "Interfaces for objects that can transition bookings.",
-            "time": "2018-03-21T10:56:10+00:00"
+            "time": "2018-05-15T08:01:55+00:00"
         },
         {
             "name": "rebelcode/event-state-machine",
-            "version": "dev-task/2_make-possible-transitions-aware",
+            "version": "v0.1-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/event-state-machine.git",
-                "reference": "0d93362754405ae8f0d878b01798a237d0d50b0a"
+                "reference": "58044434b73b1286f6ab24a851d70b6c86b1538f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/event-state-machine/zipball/0d93362754405ae8f0d878b01798a237d0d50b0a",
-                "reference": "0d93362754405ae8f0d878b01798a237d0d50b0a",
+                "url": "https://api.github.com/repos/RebelCode/event-state-machine/zipball/58044434b73b1286f6ab24a851d70b6c86b1538f",
+                "reference": "58044434b73b1286f6ab24a851d70b6c86b1538f",
                 "shasum": ""
             },
             "require": {
@@ -2402,8 +2417,8 @@
                 "dhii/exception": "^0.1-alpha4",
                 "dhii/factory-base": "^0.1-alpha1",
                 "dhii/i18n-helper-base": "^0.1",
-                "dhii/machine-state-machine-interface": "dev-develop",
-                "dhii/state-machine-abstract": "dev-develop",
+                "dhii/machine-state-machine-interface": "^0.1-alpha1",
+                "dhii/state-machine-abstract": "^0.1-alpha1",
                 "dhii/transition-event-interface": "^0.1",
                 "php": "^5.4 | ^7.0"
             },
@@ -2417,6 +2432,11 @@
                 "ptrofimov/xpmock": "^1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "RebelCode\\State\\": "src"
@@ -2433,7 +2453,7 @@
                 }
             ],
             "description": "An event-based state machine implementation.",
-            "time": "2018-04-04T14:15:54+00:00"
+            "time": "2018-05-15T10:07:20+00:00"
         },
         {
             "name": "rebelcode/modular",
@@ -4488,8 +4508,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "rebelcode/booking-transitioner": 20,
-        "rebelcode/event-state-machine": 20,
         "rebelcode/session-generator": 20
     },
     "prefer-stable": true,
