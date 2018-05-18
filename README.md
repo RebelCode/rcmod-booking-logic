@@ -6,3 +6,12 @@
 [![Latest Stable Version](https://poser.pugx.org/rebelcode/rcmod-booking-logic/version)](https://packagist.org/packages/rebelcode/rcmod-booking-logic)
 
 A RebelCode module for booking logic.
+
+## Details
+
+Requires configuration to work:
+
+```
+booking_logic/booking_status_transitions
+booking_logic/booking_event_state_machine/event_name_format
+```
