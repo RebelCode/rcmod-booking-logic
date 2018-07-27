@@ -78,9 +78,6 @@ class BookingLogicModule extends AbstractBaseModule
                         $c->get('booking_logic/state_machine/transition_event_format')
                     );
                 },
-                'session-generator-factory'     => function (ContainerInterface $c) {
-                    return new SessionGeneratorFactory();
-                },
             ]
         );
     }
