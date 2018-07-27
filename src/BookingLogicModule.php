@@ -56,14 +56,29 @@ class BookingLogicModule extends AbstractBaseModule
         return $this->_setupContainer(
             $this->_loadPhpConfigFile(RC_BOOKING_LOGIC_MODULE_CONFIG),
             [
+                /**
+                 * Factory for creating bookings; specifically, state-aware bookings.
+                 *
+                 * @since [*next-version*]
+                 */
                 'booking_factory'                            => function (ContainerInterface $c) {
                     return new StateAwareBookingFactory(
                         $c->get('map_factory')
                     );
                 },
+                /**
+                 * Factory for creating maps.
+                 *
+                 * @since [*next-version*]
+                 */
                 'map_factory'                                => function (ContainerInterface $c) {
                     return new CountableMapFactory();
                 },
+                /**
+                 * The booking transitioner instance.
+                 *
+                 * @since [*next-version*]
+                 */
                 'booking_transitioner'                       => function (ContainerInterface $c) {
                     return new BookingTransitioner(
                         $c->get('booking_logic/state_machine/status_transitions'),
@@ -71,6 +86,11 @@ class BookingLogicModule extends AbstractBaseModule
                         $c->get('booking_factory')
                     );
                 },
+                /**
+                 * The factory for creating state machines for the booking transitioner during transitions.
+                 *
+                 * @since [*next-version*]
+                 */
                 'booking_transitioner_state_machine_factory' => function (ContainerInterface $c) {
                     return new EventStateMachineFactory(
                         $c->get('event_manager'),
