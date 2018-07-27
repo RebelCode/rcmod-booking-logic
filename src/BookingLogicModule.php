@@ -2,12 +2,14 @@
 
 namespace RebelCode\Bookings\Module;
 
+use Dhii\Collection\CountableMapFactory;
 use Dhii\Data\Container\ContainerFactoryInterface;
 use Dhii\Exception\InternalException;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
 use RebelCode\Bookings\BookingFactory;
 use RebelCode\Bookings\FactoryStateMachineTransitioner;
+use RebelCode\Bookings\StateAwareBookingFactory;
 use RebelCode\Modular\Module\AbstractBaseModule;
 use RebelCode\Sessions\SessionGeneratorFactory;
 use RebelCode\State\EventStateMachineFactory;
@@ -52,8 +54,13 @@ class BookingLogicModule extends AbstractBaseModule
         return $this->_setupContainer(
             $this->_loadPhpConfigFile(RC_BOOKING_LOGIC_MODULE_CONFIG),
             [
-                'booking_factory'               => function (ContainerInterface $c) {
-                    return new BookingFactory();
+                'booking_factory'                            => function (ContainerInterface $c) {
+                    return new StateAwareBookingFactory(
+                        $c->get('map_factory')
+                    );
+                },
+                'map_factory'                                => function (ContainerInterface $c) {
+                    return new CountableMapFactory();
                 },
                 'booking_transitioner'          => function (ContainerInterface $c) {
                     return new FactoryStateMachineTransitioner(
