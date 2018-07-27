@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "57ccdb0e5647e567f5b59b4f24b6ad81",
+    "content-hash": "f47be7103828845a48d626381dea24de",
     "packages": [
         {
             "name": "dhii/args-list-validation",
@@ -2286,16 +2286,16 @@
         },
         {
             "name": "rebelcode/booking-transitioner",
-            "version": "dev-task/use-state-machine-factory",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/booking-transitioner.git",
-                "reference": "4b6e841726689b8a79ccbcf0e4c412fc65f5a761"
+                "reference": "d82b887425168f69046cf951194daeb9271d524c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/booking-transitioner/zipball/4b6e841726689b8a79ccbcf0e4c412fc65f5a761",
-                "reference": "4b6e841726689b8a79ccbcf0e4c412fc65f5a761",
+                "url": "https://api.github.com/repos/RebelCode/booking-transitioner/zipball/d82b887425168f69046cf951194daeb9271d524c",
+                "reference": "d82b887425168f69046cf951194daeb9271d524c",
                 "shasum": ""
             },
             "require": {
@@ -2338,7 +2338,7 @@
                 }
             ],
             "description": "Booking transitioner implementations.",
-            "time": "2018-07-26T15:27:02+00:00"
+            "time": "2018-07-27T09:23:22+00:00"
         },
         {
             "name": "rebelcode/event-state-machine",
@@ -4679,9 +4679,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "rebelcode/booking-transitioner": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
