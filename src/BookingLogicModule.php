@@ -8,10 +8,12 @@ use Dhii\Exception\InternalException;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
 use RebelCode\Bookings\BookingFactory;
+use RebelCode\Bookings\BookingTransitioner;
 use RebelCode\Bookings\FactoryStateMachineTransitioner;
 use RebelCode\Bookings\StateAwareBookingFactory;
 use RebelCode\Modular\Module\AbstractBaseModule;
 use RebelCode\Sessions\SessionGeneratorFactory;
+use RebelCode\State\EventStateMachine;
 use RebelCode\State\EventStateMachineFactory;
 
 /**
@@ -62,14 +64,19 @@ class BookingLogicModule extends AbstractBaseModule
                 'map_factory'                                => function (ContainerInterface $c) {
                     return new CountableMapFactory();
                 },
-                'booking_transitioner'          => function (ContainerInterface $c) {
-                    return new FactoryStateMachineTransitioner(
-                        $c->get('booking_state_machine_provider'),
+                'booking_transitioner'                       => function (ContainerInterface $c) {
+                    return new BookingTransitioner(
+                        $c->get('booking_logic/state_machine/status_transitions'),
+                        $c->get('booking_transitioner_state_machine_factory'),
                         $c->get('booking_factory')
                     );
                 },
-                'booking_state_machine_factory' => function (ContainerInterface $c) {
-                    return new EventStateMachineFactory();
+                'booking_transitioner_state_machine_factory' => function (ContainerInterface $c) {
+                    return new EventStateMachineFactory(
+                        $c->get('event_manager'),
+                        $c->get('event_factory'),
+                        $c->get('booking_logic/state_machine/transition_event_format')
+                    );
                 },
                 'session-generator-factory'     => function (ContainerInterface $c) {
                     return new SessionGeneratorFactory();
