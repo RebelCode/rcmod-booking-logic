@@ -2,15 +2,17 @@
 
 namespace RebelCode\Bookings\Module;
 
+use Dhii\Collection\CountableMapFactory;
 use Dhii\Data\Container\ContainerFactoryInterface;
 use Dhii\Exception\InternalException;
+use Dhii\Factory\GenericCallbackFactory;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
-use RebelCode\Bookings\BookingFactory;
-use RebelCode\Bookings\FactoryStateMachineTransitioner;
+use RebelCode\Bookings\BookingTransitioner;
+use RebelCode\Bookings\StateAwareBookingFactory;
 use RebelCode\Modular\Module\AbstractBaseModule;
-use RebelCode\Sessions\SessionGeneratorFactory;
 use RebelCode\State\EventStateMachineFactory;
+use RebelCode\State\TransitionEvent;
 
 /**
  * Module class for the booking logic module.
@@ -52,20 +54,67 @@ class BookingLogicModule extends AbstractBaseModule
         return $this->_setupContainer(
             $this->_loadPhpConfigFile(RC_BOOKING_LOGIC_MODULE_CONFIG),
             [
-                'booking_factory'               => function (ContainerInterface $c) {
-                    return new BookingFactory();
+                /**
+                 * Factory for creating bookings; specifically, state-aware bookings.
+                 *
+                 * @since [*next-version*]
+                 */
+                'booking_factory'                            => function (ContainerInterface $c) {
+                    return new StateAwareBookingFactory(
+                        $c->get('map_factory')
+                    );
                 },
-                'booking_transitioner'          => function (ContainerInterface $c) {
-                    return new FactoryStateMachineTransitioner(
-                        $c->get('booking_state_machine_provider'),
+                /**
+                 * Factory for creating maps.
+                 *
+                 * @since [*next-version*]
+                 */
+                'map_factory'                                => function (ContainerInterface $c) {
+                    return new CountableMapFactory();
+                },
+                /**
+                 * The booking transitioner instance.
+                 *
+                 * @since [*next-version*]
+                 */
+                'booking_transitioner'                       => function (ContainerInterface $c) {
+                    return new BookingTransitioner(
+                        $c->get('booking_logic/state_machine/status_transitions'),
+                        $c->get('booking_transitioner_state_machine_factory'),
                         $c->get('booking_factory')
                     );
                 },
-                'booking_state_machine_factory' => function (ContainerInterface $c) {
-                    return new EventStateMachineFactory();
+                /**
+                 * The factory for creating state machines for the booking transitioner during transitions.
+                 *
+                 * @since [*next-version*]
+                 */
+                'booking_transitioner_state_machine_factory' => function (ContainerInterface $c) {
+                    return new EventStateMachineFactory(
+                        $c->get('event_manager'),
+                        $c->get('booking_transition_event_factory'),
+                        $c->get('booking_logic/state_machine/transition_event_format')
+                    );
                 },
-                'session-generator-factory'     => function (ContainerInterface $c) {
-                    return new SessionGeneratorFactory();
+                /**
+                 * The factory for booking transitioner state machine to be able to create transition events.
+                 *
+                 * @since [*next-version*]
+                 */
+                'booking_transition_event_factory'           => function (ContainerInterface $c) {
+                    return new GenericCallbackFactory(function ($config) {
+                        $name       = $this->_containerGet($config, 'name');
+                        $transition = $this->_containerGet($config, 'transition');
+
+                        $target = $this->_containerHas($config, 'target')
+                            ? $this->_containerGet($config, 'target')
+                            : null;
+                        $params = $this->_containerHas($config, 'params')
+                            ? $this->_containerGet($config, 'params')
+                            : null;
+
+                        return new TransitionEvent($name, $transition, $target, $params);
+                    });
                 },
             ]
         );
