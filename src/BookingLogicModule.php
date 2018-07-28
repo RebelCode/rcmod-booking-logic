@@ -102,19 +102,7 @@ class BookingLogicModule extends AbstractBaseModule
                  * @since [*next-version*]
                  */
                 'booking_transition_event_factory'           => function (ContainerInterface $c) {
-                    return new GenericCallbackFactory(function ($config) {
-                        $name       = $this->_containerGet($config, 'name');
-                        $transition = $this->_containerGet($config, 'transition');
-
-                        $target = $this->_containerHas($config, 'target')
-                            ? $this->_containerGet($config, 'target')
-                            : null;
-                        $params = $this->_containerHas($config, 'params')
-                            ? $this->_containerGet($config, 'params')
-                            : null;
-
-                        return new TransitionEvent($name, $transition, $target, $params);
-                    });
+                    return new TransitionEventFactory();
                 },
             ]
         );
