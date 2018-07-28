@@ -93,7 +93,7 @@ class BookingLogicModule extends AbstractBaseModule
                     return new EventStateMachineFactory(
                         $c->get('event_manager'),
                         $c->get('booking_transition_event_factory'),
-                        $c->get('booking_logic/state_machine/transition_event_format')
+                        $c->get('booking_logic/transition_event_format')
                     );
                 },
                 /**
