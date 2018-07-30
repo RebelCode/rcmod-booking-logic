@@ -130,7 +130,7 @@ class TransitionEventFactory implements EventFactoryInterface
         $transition = $this->_containerGet($config, static::K_CFG_TRANSITION);
 
         $params = $this->_containerHas($config, static::K_CFG_PARAMS)
-            ? $this->_containerGet($config, 'static::K_CFG_PARAMS')
+            ? $this->_containerGet($config, static::K_CFG_PARAMS)
             : null;
         $target = $this->_containerHas($config, static::K_CFG_TARGET)
             ? $this->_containerGet($config, static::K_CFG_TARGET)
