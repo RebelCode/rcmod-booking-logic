@@ -79,7 +79,7 @@ class BookingLogicModule extends AbstractBaseModule
                  */
                 'booking_transitioner'                       => function (ContainerInterface $c) {
                     return new BookingTransitioner(
-                        $c->get('booking_logic/state_machine/status_transitions'),
+                        $c->get('booking_logic/status_transitions'),
                         $c->get('booking_transitioner_state_machine_factory'),
                         $c->get('booking_factory')
                     );
@@ -93,7 +93,7 @@ class BookingLogicModule extends AbstractBaseModule
                     return new EventStateMachineFactory(
                         $c->get('event_manager'),
                         $c->get('booking_transition_event_factory'),
-                        $c->get('booking_logic/state_machine/transition_event_format')
+                        $c->get('booking_logic/transition_event_format')
                     );
                 },
                 /**
@@ -102,19 +102,7 @@ class BookingLogicModule extends AbstractBaseModule
                  * @since [*next-version*]
                  */
                 'booking_transition_event_factory'           => function (ContainerInterface $c) {
-                    return new GenericCallbackFactory(function ($config) {
-                        $name       = $this->_containerGet($config, 'name');
-                        $transition = $this->_containerGet($config, 'transition');
-
-                        $target = $this->_containerHas($config, 'target')
-                            ? $this->_containerGet($config, 'target')
-                            : null;
-                        $params = $this->_containerHas($config, 'params')
-                            ? $this->_containerGet($config, 'params')
-                            : null;
-
-                        return new TransitionEvent($name, $transition, $target, $params);
-                    });
+                    return new TransitionEventFactory();
                 },
             ]
         );

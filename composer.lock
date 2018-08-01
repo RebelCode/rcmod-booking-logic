@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f47be7103828845a48d626381dea24de",
+    "content-hash": "d008a46de6665aa6a9dcdea751fa4dbc",
     "packages": [
         {
             "name": "dhii/args-list-validation",
@@ -209,16 +209,16 @@
         },
         {
             "name": "dhii/container-helper-base",
-            "version": "v0.1-alpha7",
+            "version": "v0.1-alpha8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/container-helper-base.git",
-                "reference": "622671534124d95c1478a744e4d903b4d071f674"
+                "reference": "1b8206842e06b71abcff769aaddfc51bf8f317cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/container-helper-base/zipball/622671534124d95c1478a744e4d903b4d071f674",
-                "reference": "622671534124d95c1478a744e4d903b4d071f674",
+                "url": "https://api.github.com/repos/Dhii/container-helper-base/zipball/1b8206842e06b71abcff769aaddfc51bf8f317cd",
+                "reference": "1b8206842e06b71abcff769aaddfc51bf8f317cd",
                 "shasum": ""
             },
             "require": {
@@ -254,7 +254,7 @@
                 }
             ],
             "description": "Helper functionality for working with container.",
-            "time": "2018-04-10T15:03:55+00:00"
+            "time": "2018-07-30T09:59:15+00:00"
         },
         {
             "name": "dhii/data-container-abstract",
@@ -1594,16 +1594,16 @@
         },
         {
             "name": "dhii/map",
-            "version": "v0.1-alpha6",
+            "version": "v0.1-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/map.git",
-                "reference": "7b11540e02ff1d6cd2efc5f4da8730c6a40076fa"
+                "reference": "9ec82af42b7cb33d3b0b70d753e8a2bc7451cedf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/map/zipball/7b11540e02ff1d6cd2efc5f4da8730c6a40076fa",
-                "reference": "7b11540e02ff1d6cd2efc5f4da8730c6a40076fa",
+                "url": "https://api.github.com/repos/Dhii/map/zipball/9ec82af42b7cb33d3b0b70d753e8a2bc7451cedf",
+                "reference": "9ec82af42b7cb33d3b0b70d753e8a2bc7451cedf",
                 "shasum": ""
             },
             "require": {
@@ -1653,7 +1653,7 @@
                 "iterable",
                 "map"
             ],
-            "time": "2018-04-30T10:18:06+00:00"
+            "time": "2018-07-30T10:48:11+00:00"
         },
         {
             "name": "dhii/module-interface",
@@ -2286,16 +2286,16 @@
         },
         {
             "name": "rebelcode/booking-transitioner",
-            "version": "dev-develop",
+            "version": "v0.2-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/booking-transitioner.git",
-                "reference": "d82b887425168f69046cf951194daeb9271d524c"
+                "reference": "5432f0d2b01cf6e431162fc0d1cbabd2a3f552f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/booking-transitioner/zipball/d82b887425168f69046cf951194daeb9271d524c",
-                "reference": "d82b887425168f69046cf951194daeb9271d524c",
+                "url": "https://api.github.com/repos/RebelCode/booking-transitioner/zipball/5432f0d2b01cf6e431162fc0d1cbabd2a3f552f7",
+                "reference": "5432f0d2b01cf6e431162fc0d1cbabd2a3f552f7",
                 "shasum": ""
             },
             "require": {
@@ -2338,20 +2338,20 @@
                 }
             ],
             "description": "Booking transitioner implementations.",
-            "time": "2018-07-27T09:23:22+00:00"
+            "time": "2018-07-31T11:36:30+00:00"
         },
         {
             "name": "rebelcode/event-state-machine",
-            "version": "dev-develop",
+            "version": "v0.2-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/event-state-machine.git",
-                "reference": "94f64e23ab94c0fa88390c8e3991b06536044479"
+                "reference": "5639f11dcc06de464bc7978002a5399be1f113e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/event-state-machine/zipball/94f64e23ab94c0fa88390c8e3991b06536044479",
-                "reference": "94f64e23ab94c0fa88390c8e3991b06536044479",
+                "url": "https://api.github.com/repos/RebelCode/event-state-machine/zipball/5639f11dcc06de464bc7978002a5399be1f113e9",
+                "reference": "5639f11dcc06de464bc7978002a5399be1f113e9",
                 "shasum": ""
             },
             "require": {
@@ -2397,7 +2397,7 @@
                 }
             ],
             "description": "An event-based state machine implementation.",
-            "time": "2018-07-26T14:24:24+00:00"
+            "time": "2018-07-27T09:38:13+00:00"
         },
         {
             "name": "rebelcode/modular",
