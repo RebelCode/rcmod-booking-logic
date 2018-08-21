@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/collections-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/config-interface" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/dhii/container-helper-base" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/data-container-abstract" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/data-container-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/data-path-aware-interface" vcs="Git" />
@@ -19,11 +20,8 @@
     <mapping directory="$PROJECT_DIR$/vendor/dhii/transition-event-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/wp-events" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/phpspec/prophecy" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vendor/rebelcode/booking" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vendor/rebelcode/booking-abstract" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/booking-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/booking-transitioner" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vendor/rebelcode/booking-transitioner-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/event-state-machine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/modular" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/module-iterator-abstract" vcs="Git" />
