@@ -5,6 +5,7 @@ use RebelCode\Bookings\Module\BookingLogicModule;
 
 define('RC_BOOKING_LOGIC_MODULE_DIR', __DIR__);
 define('RC_BOOKING_LOGIC_MODULE_CONFIG', __DIR__ . DIRECTORY_SEPARATOR . 'config.php');
+define('RC_BOOKING_LOGIC_MODULE_SERVICES', __DIR__ . DIRECTORY_SEPARATOR . 'services.php');
 define('RC_BOOKING_LOGIC_MODULE_KEY', 'booking_logic');
 
 return function(ContainerInterface $c) {
