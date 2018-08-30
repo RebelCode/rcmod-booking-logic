@@ -25,7 +25,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/exception" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/exception-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/factory-base" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/factory-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/file-finder-abstract" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/i18n-helper-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/i18n-interface" />
@@ -69,6 +68,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/event-state-machine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/modular" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/module-iterator-abstract" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/module-testing" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/rc-booking" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/rc-booking-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/rebelcode/session-generator" />

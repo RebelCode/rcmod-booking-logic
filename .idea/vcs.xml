@@ -9,6 +9,7 @@
     <mapping directory="$PROJECT_DIR$/vendor/dhii/data-container-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/data-path-aware-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/data-state-abstract" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/dhii/exception-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/file-finder-abstract" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/iterator-abstract" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/dhii/iterator-interface" vcs="Git" />
@@ -25,6 +26,7 @@
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/event-state-machine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/modular" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/module-iterator-abstract" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/rebelcode/module-testing" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/rc-booking" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/rc-booking-interface" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vendor/rebelcode/session-generator" vcs="Git" />

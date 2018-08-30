@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d20bb91157328812e544897e801ed40",
+    "content-hash": "cf9f8b4b7f450e95ae4baf83ca6ac463",
     "packages": [
         {
             "name": "dhii/args-list-validation",
@@ -3647,6 +3647,56 @@
             "time": "2014-01-02T16:42:27+00:00"
         },
         {
+            "name": "rebelcode/module-testing",
+            "version": "dev-task/initial-code",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RebelCode/module-testing.git",
+                "reference": "3bc9982658f8bfafc521ad806a45c9bf4714931a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RebelCode/module-testing/zipball/3bc9982658f8bfafc521ad806a45c9bf4714931a",
+                "reference": "3bc9982658f8bfafc521ad806a45c9bf4714931a",
+                "shasum": ""
+            },
+            "require": {
+                "dhii/container-helper-base": "^0.1-alpha7",
+                "dhii/data-container-base": "^0.1-alpha2",
+                "dhii/data-container-interface": "^0.2-alpha3",
+                "dhii/factory-base": "^0.1-alpha3",
+                "php": "^5.4 | ^7.0",
+                "phpunit/phpunit": "^4.8",
+                "ptrofimov/xpmock": "^1.1",
+                "rebelcode/modular": "^0.1-alpha1"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
+                "dhii/php-cs-fixer-config": "^0.1"
+            },
+            "bin": [
+                "bin/rcmod-gen-test.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RebelCode\\Modular\\Testing\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "RebelCode",
+                    "email": "dev@rebelcode.com"
+                }
+            ],
+            "description": "Tools for testing RebelCode modules.",
+            "time": "2018-08-24T10:34:09+00:00"
+        },
+        {
             "name": "satooshi/php-coveralls",
             "version": "v1.0.2",
             "source": {
@@ -4682,7 +4732,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rebelcode/module-testing": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
