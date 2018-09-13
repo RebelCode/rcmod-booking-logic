@@ -2,9 +2,7 @@
 
 namespace RebelCode\Bookings\Module;
 
-use Dhii\Data\Container\ContainerFactoryInterface;
 use Dhii\Exception\InternalException;
-use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
 use RebelCode\Modular\Module\AbstractBaseModule;
 
@@ -16,27 +14,6 @@ use RebelCode\Modular\Module\AbstractBaseModule;
 class BookingLogicModule extends AbstractBaseModule
 {
     /**
-     * Constructor.
-     *
-     * @since [*next-version*]
-     *
-     * @param string|Stringable         $key                  The module key.
-     * @param string[]|Stringable[]     $dependencies         The module dependencies.
-     * @param ContainerFactoryInterface $configFactory        The config factory.
-     * @param ContainerFactoryInterface $containerFactory     The container factory.
-     * @param ContainerFactoryInterface $compContainerFactory The composite container factory.
-     */
-    public function __construct(
-        $key,
-        $dependencies,
-        $configFactory,
-        $containerFactory,
-        $compContainerFactory
-    ) {
-        $this->_initModule($key, $dependencies, $configFactory, $containerFactory, $compContainerFactory);
-    }
-
-    /**
      * {@inheritdoc}
      *
      * @since [*next-version*]
@@ -45,9 +22,11 @@ class BookingLogicModule extends AbstractBaseModule
      */
     public function setup()
     {
+        $config = $this->_getConfig();
+
         return $this->_setupContainer(
-            $this->_loadPhpConfigFile(RC_BOOKING_LOGIC_MODULE_CONFIG),
-            $this->_loadPhpConfigFile(RC_BOOKING_LOGIC_MODULE_SERVICES)
+            $this->_loadPhpConfigFile($config->get('config_file_path')),
+            $this->_loadPhpConfigFile($config->get('services_file_path'))
         );
     }
 
