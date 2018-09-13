@@ -10,7 +10,7 @@ use RebelCode\Modular\Testing\ModuleTestCase;
 /**
  * Tests the booking logic module.
  *
- * @see BookingLogicModule
+ * @see   BookingLogicModule
  *
  * @since [*next-version*]
  */
@@ -26,6 +26,28 @@ class BookingLogicModuleTest extends ModuleTestCase
     public function getModuleFilePath()
     {
         return __DIR__ . '/../../module.php';
+    }
+
+    /**
+     * Tests the `setup()` method to assert whether the resulting container contains the config.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetupConfig()
+    {
+        /* @var $module MockObject|ModuleInterface */
+        $module = $this->createModule($this->getModuleFilePath());
+
+        $this->assertModuleHasConfig(
+            'booking_logic',
+            [
+                'booking_status_transitions'  => [],
+                'booking_event_state_machine' => [
+                    'event_name_format' => 'booking_transition',
+                ],
+            ],
+            $module
+        );
     }
 
     /**
