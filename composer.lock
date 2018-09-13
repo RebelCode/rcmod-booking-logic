@@ -2405,12 +2405,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/modular.git",
-                "reference": "72ddff150af4ce91f47833c4518352e1c3dd899d"
+                "reference": "61898c5f92e2f4bd56ebf254537e4d2db1d8822e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/modular/zipball/72ddff150af4ce91f47833c4518352e1c3dd899d",
-                "reference": "72ddff150af4ce91f47833c4518352e1c3dd899d",
+                "url": "https://api.github.com/repos/RebelCode/modular/zipball/61898c5f92e2f4bd56ebf254537e4d2db1d8822e",
+                "reference": "61898c5f92e2f4bd56ebf254537e4d2db1d8822e",
                 "shasum": ""
             },
             "require": {
@@ -2442,6 +2442,11 @@
                 "ptrofimov/xpmock": "^1.1"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "RebelCode\\Modular\\": "src"
@@ -2458,7 +2463,7 @@
                 }
             ],
             "description": "A module system.",
-            "time": "2018-09-03T13:24:07+00:00"
+            "time": "2018-09-13T15:24:48+00:00"
         },
         {
             "name": "rebelcode/module-iterator-abstract",
@@ -3652,12 +3657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/module-testing.git",
-                "reference": "19a7f7f74e13f37be92155db73d9c931b7d7afaf"
+                "reference": "b1579c3135c0adf295697df80f39cf9c8a5bab8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/module-testing/zipball/19a7f7f74e13f37be92155db73d9c931b7d7afaf",
-                "reference": "19a7f7f74e13f37be92155db73d9c931b7d7afaf",
+                "url": "https://api.github.com/repos/RebelCode/module-testing/zipball/b1579c3135c0adf295697df80f39cf9c8a5bab8d",
+                "reference": "b1579c3135c0adf295697df80f39cf9c8a5bab8d",
                 "shasum": ""
             },
             "require": {
@@ -3699,7 +3704,7 @@
                 }
             ],
             "description": "Tools for testing RebelCode modules.",
-            "time": "2018-09-13T10:06:25+00:00"
+            "time": "2018-09-13T15:22:37+00:00"
         },
         {
             "name": "satooshi/php-coveralls",
