@@ -2405,12 +2405,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/modular.git",
-                "reference": "61898c5f92e2f4bd56ebf254537e4d2db1d8822e"
+                "reference": "46f8c8aac83266dda8bad9adab579e08e299bfdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/modular/zipball/61898c5f92e2f4bd56ebf254537e4d2db1d8822e",
-                "reference": "61898c5f92e2f4bd56ebf254537e4d2db1d8822e",
+                "url": "https://api.github.com/repos/RebelCode/modular/zipball/46f8c8aac83266dda8bad9adab579e08e299bfdb",
+                "reference": "46f8c8aac83266dda8bad9adab579e08e299bfdb",
                 "shasum": ""
             },
             "require": {
@@ -2463,7 +2463,7 @@
                 }
             ],
             "description": "A module system.",
-            "time": "2018-09-13T15:24:48+00:00"
+            "time": "2018-09-17T12:40:18+00:00"
         },
         {
             "name": "rebelcode/module-iterator-abstract",
@@ -3657,12 +3657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCode/module-testing.git",
-                "reference": "b1579c3135c0adf295697df80f39cf9c8a5bab8d"
+                "reference": "5a3f01df5052cda325c95a0a61c5c9e4becc2cb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCode/module-testing/zipball/b1579c3135c0adf295697df80f39cf9c8a5bab8d",
-                "reference": "b1579c3135c0adf295697df80f39cf9c8a5bab8d",
+                "url": "https://api.github.com/repos/RebelCode/module-testing/zipball/5a3f01df5052cda325c95a0a61c5c9e4becc2cb0",
+                "reference": "5a3f01df5052cda325c95a0a61c5c9e4becc2cb0",
                 "shasum": ""
             },
             "require": {
@@ -3704,7 +3704,7 @@
                 }
             ],
             "description": "Tools for testing RebelCode modules.",
-            "time": "2018-09-13T15:22:37+00:00"
+            "time": "2018-09-17T13:01:41+00:00"
         },
         {
             "name": "satooshi/php-coveralls",

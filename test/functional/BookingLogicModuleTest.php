@@ -39,14 +39,14 @@ class BookingLogicModuleTest extends ModuleTestCase
         $module = $this->createModule($this->getModuleFilePath());
 
         $this->assertModuleHasConfig(
+            $module,
             'booking_logic',
             [
                 'booking_status_transitions'  => [],
                 'booking_event_state_machine' => [
                     'event_name_format' => 'booking_transition',
                 ],
-            ],
-            $module
+            ]
         );
     }
 
@@ -61,7 +61,7 @@ class BookingLogicModuleTest extends ModuleTestCase
         /* @var $module MockObject|ModuleInterface */
         $module = $this->createModule($this->getModuleFilePath());
 
-        $this->assertModuleHasService('booking_factory', 'Dhii\Data\StateAwareFactoryInterface', $module, [
+        $this->assertModuleHasService($module, 'booking_factory', 'Dhii\Data\StateAwareFactoryInterface', [
             /* Add mocked dependency services here */
         ]);
     }
@@ -76,7 +76,7 @@ class BookingLogicModuleTest extends ModuleTestCase
         /* @var $module MockObject|ModuleInterface */
         $module = $this->createModule($this->getModuleFilePath());
 
-        $this->assertModuleHasService('map_factory', 'Dhii\Collection\MapFactoryInterface', $module, [
+        $this->assertModuleHasService($module, 'map_factory', 'Dhii\Collection\MapFactoryInterface', [
             /* Add mocked dependency services here */
         ]);
     }
@@ -92,7 +92,7 @@ class BookingLogicModuleTest extends ModuleTestCase
         /* @var $module MockObject|ModuleInterface */
         $module = $this->createModule($this->getModuleFilePath());
 
-        $this->assertModuleHasService('booking_transitioner', 'Dhii\Data\TransitionerInterface', $module, [
+        $this->assertModuleHasService($module, 'booking_transitioner', 'Dhii\Data\TransitionerInterface', [
             'booking_logic/status_transitions'      => [],
             'booking_logic/transition_event_format' => '',
             'event_manager'                         => $this->mockEventManager(),
@@ -111,9 +111,9 @@ class BookingLogicModuleTest extends ModuleTestCase
         $module = $this->createModule($this->getModuleFilePath());
 
         $this->assertModuleHasService(
+            $module,
             'booking_transitioner_state_machine_factory',
             'Dhii\State\StateMachineFactoryInterface',
-            $module,
             [
                 'booking_logic/status_transitions'      => [],
                 'booking_logic/transition_event_format' => '',
@@ -133,7 +133,7 @@ class BookingLogicModuleTest extends ModuleTestCase
         /* @var $module MockObject|ModuleInterface */
         $module = $this->createModule($this->getModuleFilePath());
 
-        $this->assertModuleHasService('booking_transition_event_factory', 'Dhii\Event\EventFactoryInterface', $module, [
+        $this->assertModuleHasService($module, 'booking_transition_event_factory', 'Dhii\Event\EventFactoryInterface', [
             /* Add mocked dependency services here */
         ]);
     }
