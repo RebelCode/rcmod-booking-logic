@@ -79,7 +79,8 @@ class BookingLogicModule extends AbstractBaseModule
                     return new BookingTransitioner(
                         $c->get('booking_logic/status_transitions'),
                         $c->get('booking_transitioner_state_machine_factory'),
-                        $c->get('booking_factory')
+                        $c->get('booking_factory'),
+                        $c->get('booking_logic/transitioner/state_key')
                     );
                 },
                 /**

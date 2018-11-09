@@ -1,3 +1,9 @@
 <?php
 
-return [];
+return [
+    'booking_logic' => [
+        'transitioner' => [
+            'state_key' => 'status'
+        ]
+    ]
+];
