@@ -5,14 +5,12 @@ namespace RebelCode\Bookings\Module;
 use Dhii\Collection\CountableMapFactory;
 use Dhii\Data\Container\ContainerFactoryInterface;
 use Dhii\Exception\InternalException;
-use Dhii\Factory\GenericCallbackFactory;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\Container\ContainerInterface;
-use RebelCode\Bookings\BookingTransitioner;
-use RebelCode\Bookings\StateAwareBookingFactory;
+use RebelCode\Bookings\BookingFactory;
+use RebelCode\Bookings\Transitioner\BookingTransitioner;
 use RebelCode\Modular\Module\AbstractBaseModule;
 use RebelCode\State\EventStateMachineFactory;
-use RebelCode\State\TransitionEvent;
 
 /**
  * Module class for the booking logic module.
@@ -60,7 +58,7 @@ class BookingLogicModule extends AbstractBaseModule
                  * @since [*next-version*]
                  */
                 'booking_factory'                            => function (ContainerInterface $c) {
-                    return new StateAwareBookingFactory(
+                    return new BookingFactory(
                         $c->get('map_factory')
                     );
                 },
@@ -81,7 +79,8 @@ class BookingLogicModule extends AbstractBaseModule
                     return new BookingTransitioner(
                         $c->get('booking_logic/status_transitions'),
                         $c->get('booking_transitioner_state_machine_factory'),
-                        $c->get('booking_factory')
+                        $c->get('booking_factory'),
+                        $c->get('booking_logic/transitioner/state_key')
                     );
                 },
                 /**

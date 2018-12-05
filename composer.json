@@ -12,10 +12,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^5.4 | ^7.0",
+        "php": "^5.5 | ^7.0",
         "rebelcode/modular": "^0.1-alpha1",
-        "rebelcode/rc-booking": "^0.1-alpha1",
-        "rebelcode/booking-transitioner": "^0.2-alpha2",
+        "rebelcode/booking-system": "^0.1",
         "rebelcode/event-state-machine": "^0.2-alpha1",
         "rebelcode/session-generator": "^0.1-alpha1",
         "dhii/psr-14": "^0.1",
