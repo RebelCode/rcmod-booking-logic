@@ -10,8 +10,14 @@ use Dhii\Data\Container\NormalizeKeyCapableTrait;
 use Dhii\Event\EventFactoryInterface;
 use Dhii\Exception\CreateInvalidArgumentExceptionCapableTrait;
 use Dhii\Exception\CreateOutOfRangeExceptionCapableTrait;
+use Dhii\Factory\Exception\CreateCouldNotMakeExceptionCapableTrait;
+use Dhii\Factory\Exception\CreateFactoryExceptionCapableTrait;
 use Dhii\I18n\StringTranslatingTrait;
 use Dhii\Util\Normalization\NormalizeStringCapableTrait;
+use Exception;
+use LogicException;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use RebelCode\State\TransitionEvent;
 
 /**
@@ -78,6 +84,20 @@ class TransitionEventFactory implements EventFactoryInterface
     use CreateNotFoundExceptionCapableTrait;
 
     /*
+     * Provides functionality for creating factory could-not-make exceptions.
+     *
+     * @since [*next-version*]
+     */
+    use CreateCouldNotMakeExceptionCapableTrait;
+
+    /*
+     * Provides functionality for creating factory exceptions.
+     *
+     * @since [*next-version*]
+     */
+    use CreateFactoryExceptionCapableTrait;
+
+    /*
      * Provides string translating functionality.
      *
      * @since [*next-version*]
@@ -126,16 +146,32 @@ class TransitionEventFactory implements EventFactoryInterface
      */
     public function make($config = null)
     {
-        $name       = $this->_containerGet($config, static::K_CFG_NAME);
-        $transition = $this->_containerGet($config, static::K_CFG_TRANSITION);
+        try {
+            $name       = $this->_containerGet($config, static::K_CFG_NAME);
+            $transition = $this->_containerGet($config, static::K_CFG_TRANSITION);
 
-        $params = $this->_containerHas($config, static::K_CFG_PARAMS)
-            ? $this->_containerGet($config, static::K_CFG_PARAMS)
-            : null;
-        $target = $this->_containerHas($config, static::K_CFG_TARGET)
-            ? $this->_containerGet($config, static::K_CFG_TARGET)
-            : null;
+            $params = $this->_containerHas($config, static::K_CFG_PARAMS)
+                ? $this->_containerGet($config, static::K_CFG_PARAMS)
+                : [];
+            $target = $this->_containerHas($config, static::K_CFG_TARGET)
+                ? $this->_containerGet($config, static::K_CFG_TARGET)
+                : null;
+        } catch (NotFoundExceptionInterface $nfException) {
+            throw $this->_createCouldNotMakeException(
+                $this->__('Config has missing required data'), null, $nfException, $this, $config
+            );
+        } catch (ContainerExceptionInterface $cException) {
+            throw $this->_createFactoryException(
+                $this->__('Failed to read data from the config'), null, $cException, $this
+            );
+        }
 
-        return new TransitionEvent($name, $transition, $target, $params);
+        try {
+            return new TransitionEvent($name, $transition, $target, $params);
+        } catch (Exception $exception) {
+            throw $this->_createCouldNotMakeException(
+                $this->__('Failed to create instance'), null, $exception, $this, $config
+            );
+        }
     }
 }
